@@ -17,9 +17,6 @@ Example
 const word2pdf = require('word2pdf');
 const fs = require('fs');
 
-const convert = async () => {
-	const data = await word2pdf('test.docx')
-	fs.writeFileSync('test.pdf', data);
-}
+word2pdf(sourcePath, outputPath).then(() => res.send("success"), err => res.send(err));
 ```
 
